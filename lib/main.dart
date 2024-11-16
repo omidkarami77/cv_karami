@@ -16,10 +16,16 @@ class MyApplication extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: getAppBar(),
-        body: SafeArea(child: Text("Hi ")),
+        body: SafeArea(child: getMainBody()),
       ),
     );
   }
+}
+
+Widget getMainBody() {
+  return SingleChildScrollView(
+    child: Column(),
+  );
 }
 
 PreferredSizeWidget getAppBar() {
