@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(const MyApplication());
@@ -25,6 +26,7 @@ class MyApplication extends StatelessWidget {
 Widget _getMainBody() {
   return SingleChildScrollView(
     child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         getHeader(),
       ],
@@ -33,26 +35,66 @@ Widget _getMainBody() {
 }
 
 Widget getHeader() {
-  return const Column(
+  return Column(
     children: [
-      SizedBox(
+      const SizedBox(
         height: 20,
       ),
-      CircleAvatar(
+      const CircleAvatar(
         radius: 70,
         backgroundImage: AssetImage("images/omid.jpg"),
       ),
-      Text(
+      const Text(
         "امیدم یک برنامه نویس و تحلیلگر",
+        textAlign: TextAlign.center,
         style: TextStyle(
           fontSize: 18,
           fontWeight: FontWeight.w900,
         ),
       ),
-      SizedBox(
+      const SizedBox(
         height: 15,
       ),
-      Text("عاشق برنامه نویسی موبایل و بازارهای مالی")
+      const Text(
+        "عاشق برنامه نویسی موبایل و بازارهای مالی",
+        textAlign: TextAlign.center,
+      ),
+      SizedBox(
+        height: 10,
+      ),
+      _getRowIcons(),
+    ],
+  );
+}
+
+Widget _getRowIcons() {
+  return Wrap(
+    runSpacing: 20,
+    spacing: 20,
+    alignment: WrapAlignment.center,
+    children: [
+      IconButton(
+          onPressed: () {}, icon: const FaIcon(FontAwesomeIcons.accusoft)),
+      IconButton(
+          onPressed: () {}, icon: const FaIcon(FontAwesomeIcons.accusoft)),
+      IconButton(
+          onPressed: () {}, icon: const FaIcon(FontAwesomeIcons.accusoft)),
+      IconButton(
+          onPressed: () {}, icon: const FaIcon(FontAwesomeIcons.accusoft)),
+      IconButton(
+          onPressed: () {}, icon: const FaIcon(FontAwesomeIcons.accusoft)),
+      IconButton(
+          onPressed: () {}, icon: const FaIcon(FontAwesomeIcons.accusoft)),
+      IconButton(
+          onPressed: () {}, icon: const FaIcon(FontAwesomeIcons.accusoft)),
+      IconButton(
+          onPressed: () {}, icon: const FaIcon(FontAwesomeIcons.accusoft)),
+      IconButton(
+          onPressed: () {}, icon: const FaIcon(FontAwesomeIcons.accusoft)),
+      IconButton(
+          onPressed: () {}, icon: const FaIcon(FontAwesomeIcons.accusoft)),
+      IconButton(
+          onPressed: () {}, icon: const FaIcon(FontAwesomeIcons.accusoft)),
     ],
   );
 }
